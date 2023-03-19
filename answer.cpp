@@ -4,23 +4,21 @@ using namespace std;
 
 
 int main(){
-    char *ch,c;
-    string str;
-    ch=new char[100];
-    int x='A'-'a',n=0;
-    while(cin>>c){
-        //if(!(c>='A'&&c<='Z')) break;
-        cout<<(char)(c+32)<<endl;
-        //cin>>c;
-
-        //ch[n++]=c;
-        //cin>>ch[n++];
-
-        //if (cin.get()=='\n') break;//********important judge "enter"*****---
+    int n;
+    char c;
+    cout<<"enter an number(height of pyramid) : ";
+    cin>>n;
+    cout<<endl<<"enter a char : ";
+    cin>>c;
+    cout<<endl;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n-i;j++){cout<<" ";}
+        for (int k=0;k<i;k++)
+        cout<<c<<" ";
+        cout<<endl;
     }
-//    for (int i=0;i<str.size();i++)
-//        if(str[i]!='\n')
-//        cout<<(char)(ch[i]+32)<<endl;
+
+
 
 
     return 0;

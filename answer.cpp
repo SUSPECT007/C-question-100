@@ -4,12 +4,13 @@ using namespace std;
 
 
 int main(){
-    double a,b,c,ans,p;
-    cout<<"enter the score of the student: ";
-    cin>>a>>b>>c;
-    ans=a+b+c;
-    p=ans/3.0;
-    printf("%.2f %.2lf",ans,p);
+    int a,n;
+    cout<<"you will exit ,if you enter char "<<endl;
+    while(cin>>n){
+        a=1;
+        a<<=n;
+        cout<<a<<endl;
+    }
     return 0;
 }
 

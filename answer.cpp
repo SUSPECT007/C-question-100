@@ -9,28 +9,14 @@ using namespace std;
 
 
 int main(){
-   double a,b,c,deta,x1,x2;
-   cin>>a>>b>>c;
-   cout<<setiosflags(ios::fixed)<<setprecision(2);
-   if(a==0) {cout<<endl<<"Not quadratic equation"<<endl; return 0;}
-   deta=b*b-4*a*c;
-   if (deta==0){
-       x1=(-b)/(2.0*a);
-       cout<<"x1=x2="<<x1<<endl;
-   }
-    if (deta>0){
-        double d=sqrt(deta);
-        x1=(-b+d)/(2.0*a);
-        x2=(-b-d)/(2.0*a);
-        cout<<"x1="<<x1<<"x2="<<x2<<endl;
-    }
-    if (deta<0){
-        double i=sqrt(-deta)/(2*a);
-        double r=(-b)/(2.0*a);
-        cout<<"x1="<<r<<" +"<<i<<"i "<<"x2="<<r<<" -"<<i<<"i "<<endl;
-    }
+    int y,m;
+   cin>>y>>m;
+   if(m==2)
+       if ((y%4==0&&y%100!=0)||y%400==0) cout<<29;
+       else cout<<28;
 
-
+   if(m==1||m==3||m==5||m==7||m==8||m==10||m==12) cout<<31;
+   else if (m!=2)cout<<30;
 
     return 0;
 }
